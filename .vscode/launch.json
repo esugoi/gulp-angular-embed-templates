@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "request": "launch",
+            "name": "Debug Mocha Test",
+            "type": "node",
+            // Notice, we bypass the launcher and start the test runner directly
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": true,
+            // run the tests in the test folder
+            "args": ["test"],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": { }
+        }
+    ]
+}

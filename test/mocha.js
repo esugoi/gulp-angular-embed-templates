@@ -207,6 +207,10 @@ describe('gulp-angular-embed-templates', function () {
         testEmbed('angular2-templateUrl', done);
     });
 
+    it('should embed templateUrl: path and keep casing in Angular2.x just fine', function(done) {
+        testEmbed('angular2-templateUrl-casing', done, {minimize:{dom: {lowerCaseAttributeNames: false}}});
+    });
+
     it('should embed templateUrl: strign = \'path\' in class definition', function(done) {
         testEmbed('angular2-class', done, {sourceType: 'ts'});
     });
@@ -218,4 +222,8 @@ describe('gulp-angular-embed-templates', function () {
     it('should allow to remove attribute quotes', function (done) {
         testEmbed('attr-quotes-remove', done, {minimize:{quotes: false}});
     })
+
+    it('should embed styleUrls: path in Angular2.x just fine', function(done) {
+        testEmbed('angular2-styleUrls', done, {sourceType: 'ts'});
+    });
 });
